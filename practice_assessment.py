@@ -4,10 +4,9 @@ Date: 10/08/26
 Version: 1
 Descroption: Heads Vs Tails
 '''
-#----------------------------------------------------------Libaries------------------------------------------------------------
 import random
-#---------------------------------------------------------Functions------------------------------------------------------------
-def heads_and_tails(): # this does the heads vs tails code
+#---------------------------------------------------------Functions--------------------------------------------------
+def heads_and_tails(): # this does the heads vs tails routine
     user_score=0
     computer_score=0
     options=["Heads","Tails"] # your selection of options for what you can pick
@@ -21,12 +20,12 @@ def heads_and_tails(): # this does the heads vs tails code
         else:
             print(f'the side that landed was {computer_guess}, and you guesses {user_guess}, you do not gain a point')
             computer_score +=1
-        if user_score==2: # winning / loosing conditions
-            print(f'congratulations {first_name}, you win the game! CONGRATULATIONS')
-        else:
-            print(f'hahaha you lost')
-#---------------------------------------------------------main_routine-------------------------------------------------------------
-print("(heads or tails)") # where it displays the question to the user
+
+    if computer_score==2: # winning / loosing conditions
+        print(f'hahaha you lost')
+    else:
+        print(f'congratulations {first_name}, you win the game! CONGRATULATIONS')
+#---------------------------------------------------------main_routine------------------------------------------------
 first_name=str(input("what is your name: "))
 age=int(input("what is your age: "))
 heads_and_tails() # calls function
